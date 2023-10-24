@@ -1,47 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eventos Express</title>
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="/src/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Lexend&display=swap" rel="stylesheet">
     <script defer src="/src/js/script.js"></script>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #FAFAFA;
-        }
-        
-        #container {
-            margin: 50px auto;
-            max-width: 600px;
-            padding: 20px;
-            background-color: #6E6AAA;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        
-        #construction-image {
-            width: 400px;
-            height: auto;
-            margin: 0 auto 20px;
-            display: block;
-        }
-        
-        #construction-text {
-            font-size: 24px;
-            color: #6E6AAA;
-        }
-    </style>
   </head>
   <body>
     <header class="header">
-      <a href="../index.html" class="logo"><img src="../img/logo.jpeg" alt="logo"></a>
+      <a href="/src/index.html" class="logo"><img src="/src/img/home/logo.jpeg" alt="logo"></a>
       <nav class="nav">
         <button
           class="btn-menu"
@@ -61,24 +33,78 @@
       </nav>
     </header>
 
-    <section class="container-construction">
-        <div id="container-construcao">
-            <img id="construction-image" src="../img/under construction.gif" alt="Em Construção">
-            <a href="https://storyset.com/web">Web illustrations by Storyset</a>
-            <p id="construction-text">Em Construção!</p>
-        </div>
-    </section>
+    <main class="container-cards">
+      <section class="card card-caballa">
+          <div class="container-icons">
+              <figure>
+                <img class="icon" src="/src/img/debutante/Caballa.PNG" id="img">
+              </figure>
+          </div>
+          <h3>Espaço Caballa</h3>
+          <a href="/src/html/debutante/decoracao.html">
+          <button class="btn">Veja Mais</button>
+          </a>
+      </section>
 
+      <section class="card card-partello">
+        <div class="container-icons">
+            <figure>
+              <img class="icon" src="/src/img/debutante/partello.PNG" id="img">
+            </figure>
+        </div>
+        <h3>Salão Partello</h3>
+        <a href="/src/html/debutante/decoracao.html">
+          <button class="btn">Veja Mais</button>
+        </a> 
+      </section>
+
+      <section class="card card-eventos">
+        <div class="container-icons">
+            <figure>
+              <img class="icon" src="/src/img/debutante/eventos.PNG" id="img">
+            </figure>
+        </div>
+        <h3>Coliseu Eventos</h3>
+        <a href="/src/html/debutante/decoracao.html">
+          <button class="btn">Veja Mais</button>
+        </a>
+      </section>
+
+      <section class="card card-monazetti">
+        <div class="container-icons">
+            <figure>
+              <img class="icon" src="/src/img/debutante/monazetti.PNG" id="img">
+            </figure>
+        </div>
+        <h3>Monazetti Festas e Eventos</h3>
+        <a href="/src/html/debutante/decoracao.html">
+          <button class="btn">Veja Mais</button>
+        </a>
+      </section>
+
+      <section class="card card-minerva">
+        <div class="container-icons">
+            <figure>
+              <img class="icon" src="/src/img/debutante/minerva.PNG" id="img">
+            </figure>
+        </div>
+        <h3>Espaço Min</h3>
+        <a href="/src/html/debutante/decoracao.html">
+          <button class="btn">Veja Mais</button>
+        </a>
+      </section>
+    </main>
+    
     <footer>
       <section class="footer">
         <div class="about">
           <h4>Sobre</h4>          
-          <a href="./html/sobre.html">Somos uma startup voltada para eventos</a>
+          <a href="/src/html/sobre.html">Somos uma startup voltada para eventos</a>
         </div>
         
         <div class="contact">
           <h4>Contato</h4>
-          <a href="./html/contato.html">contato@eventosexpress.com.br</a>
+          <a href="/src/html/contato.html">contato@eventosexpress.com.br</a>
         </div>
         
         <div class="social-media">
@@ -95,5 +121,5 @@
         </div>
       </section>
     </footer>
-    </body>
+  </body>
 </html>

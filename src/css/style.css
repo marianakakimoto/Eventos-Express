@@ -39,10 +39,12 @@
     font-size: 1.5rem;
     font-weight: bold;
   }
+  
   .logo img {
     max-width: 5rem; 
     height: auto; 
-}
+  }
+
   .menu {
     list-style: none;
     display: flex;
@@ -63,15 +65,15 @@
     display: none;
   }
   
-      /* Reset de estilos para inputs */
+  /* Reset de estilos para inputs */
   input {
-      border: none;
-      border-bottom: 1px solid var(--lilas);
-      padding: 10px;
-      font-size: 16px;
-      width: 100%;
-      margin-bottom: 20px;
-      transition: border-bottom-color 0.3s;
+    border: none;
+    border-bottom: 1px solid var(--lilas);
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: border-bottom-color 0.3s;
   }
 
   /* Estilo quando o foco está no input */
@@ -104,9 +106,9 @@
   form {
       margin: 0 auto; /* Centraliza o formulário na página */
       width: 30%; /* Define a largura do formulário como 60% do tamanho original */
-      padding: 20px; /* Espaçamento interno para melhor aparência */
+      /*padding: 20px; Espaçamento interno para melhor aparência */
       background-color: var(--white);
-      border: 1px solid var(--lilas);
+      /*border: 1px solid var(--lilas);*/
       border-radius: 8px;
   }
 
@@ -181,8 +183,8 @@
 
   /* Estilos para a imagem dentro do contêiner */
   figure {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
   }
 
   .card .container-icons .icon {
@@ -256,7 +258,6 @@
   }
 
   /* Estilos para layout responsivo */
-
   @media (max-width: 600px) {
     .menu {
       display: block;
