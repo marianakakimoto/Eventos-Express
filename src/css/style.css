@@ -1,0 +1,367 @@
+:root {
+    font-size: 16px;
+    --roxo: rgba(111, 106, 170, 1);
+    --lilas: rgb(159, 155, 209);
+    --cinzaclaro:#FAFAFA;
+    --white: #fff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Lexend', sans-serif;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background: var(--white);
+  }
+  
+  a {
+    color: var(--white);
+    text-decoration: none;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--roxo);
+    height: 4.6875rem;
+    padding: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .logo img {
+    max-width: 5rem; 
+    height: auto; 
+}
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .menu a:hover {
+    background: var(--lilas);
+  }
+  
+  .btn-menu {
+    display: none;
+  }
+  
+      /* Reset de estilos para inputs */
+  input {
+      border: none;
+      border-bottom: 1px solid var(--lilas);
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 20px;
+      transition: border-bottom-color 0.3s;
+  }
+
+  /* Estilo quando o foco está no input */
+  input:focus {
+      outline: none;
+      border-bottom-color: var(--roxo);
+  }
+
+  /* Estilo para select (lista suspensa) */
+  select {
+      border: 1px solid var(--lilas);
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 20px;
+      background-color: var(--white);
+      transition: border-color 0.3s;
+  }
+
+  /* Estilo para select quando o foco está nele */
+  select:focus {
+      outline: none;
+      border-color: var(--roxo);
+  }
+
+  .container-form {
+    padding: 8px;
+  }
+
+  form {
+      margin: 0 auto; /* Centraliza o formulário na página */
+      width: 30%; /* Define a largura do formulário como 60% do tamanho original */
+      padding: 20px; /* Espaçamento interno para melhor aparência */
+      background-color: var(--white);
+      border: 1px solid var(--lilas);
+      border-radius: 8px;
+  }
+
+  .btn-enviar {
+    display: block; /* Torna o botão um bloco para que as regras de margem funcionem */
+    margin: 0 auto; /* Centraliza horizontalmente o botão dentro do formulário */
+  }
+
+  /*Estilos para o titulo acima dos cards*/
+  .title {
+    width: 100%; 
+    height: auto;
+    display: inline-block;
+    box-shadow: 20px 20px 50px -30px #6E6AAA;
+    text-align: center;
+    margin: 32px 0; /* Adicionado espaço acima e abaixo do título */
+  }
+
+  .main-title {
+    color: var(--roxo);
+    font-size: 2rem;
+  }
+
+  /* Estilos para o container de cartões */
+  .container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    /*flex-direction: column; /* Alterado para uma única coluna responsiva */
+    justify-content: center;
+    align-items: center; /* Adicionado para centralizar horizontalmente */
+    margin: 32px 0; /* Adicionado espaço acima e abaixo dos cartões */
+  }
+
+  /* Estilos para cada cartão individual */
+  .card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--cinzaclaro);
+    padding: 1rem 1.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 20px 20px 50px -30px var(--roxo);
+    max-height: 468px;
+    margin: 16px;
+    /*se em coluna:0*/ /* Espaçamento entre os cartões */
+    width: calc(25% - 32px); /* Largura dos cartões em telas menores */
+    /*se em coluna: 80%*/ /* Largura dos cartões em telas menores */
+    max-width: 400px; /* Largura máxima dos cartões */
+  }
+
+  .card .icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Adicione os estilos para o contêiner de imagem */
+  .card .container-icons {
+    width: 100%;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+  }
+
+  /* Estilos para a imagem dentro do contêiner */
+  figure {
+    width: 350px;
+    height: 350px;
+  }
+
+  .card .container-icons .icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Foi necessario por conta do carousel, não é possivel usar a classe dele, portanto fiz uma id*/
+  .card .container-icons #icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: var(--roxo);
+  }
+
+  .btn {
+    background: linear-gradient(to right, var(--roxo), rgba(111, 106, 170, 0.15));  
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    border: 0;
+    cursor: pointer;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--cinzaclaro);
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: background 0.6s ease, color 0.6s ease; /* Adiciona uma transição suave */
+  }
+
+  .card button:hover {
+    background: linear-gradient(to right, rgba(111, 106, 170, 0.15), var(--roxo));
+    color: var(--white); /* Altera a cor do texto ao passar o mouse */
+  }
+
+  /* Estilo do carrousel*/
+  .container-carrousel {
+    max-width: 100%;
+    margin: 0 auto; /* Centraliza o carrossel horizontalmente */
+    padding: 20px; /* Espaçamento interno opcional */
+  }
+
+  /* Estilos padrão para o footer */
+  .footer {
+    background-color: var(--roxo);
+    color: var(--cinzaclaro);
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .footer h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+
+  .footer .about,
+  .footer .contact,
+  .footer .social-media,
+  .footer .signature {
+    margin-bottom: 20px;
+  }
+
+  /* Estilos para layout responsivo */
+
+  @media (max-width: 600px) {
+    .menu {
+      display: block;
+      position: absolute;
+      top: 4.6875rem;
+      left: 0;
+      background: var(--roxo);
+      text-align: center;
+      width: 100%;
+      height: 0;
+      z-index: 1;
+      visibility: hidden;
+      overflow-y: hidden;
+      transition: 0.5s;
+    }
+
+    .menu a {
+      padding: 1rem 0;
+      margin-inline: 1rem;
+      border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
+      border-radius: 0;
+    }
+
+    .btn-menu {
+      background: none;
+      border: none;
+      font: inherit;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--white);
+      padding: 1rem 0;
+      cursor: pointer;
+    }
+
+    .hamburger {
+      border-top: 0.125rem solid;
+      width: 1.25rem;
+    }
+
+    .hamburger::after,
+    .hamburger::before {
+      content: " ";
+      display: block;
+      width: 1.25rem;
+      height: 0.125rem;
+      background: currentColor;
+      margin-top: 0.3125rem;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    .nav.active .menu {
+      height: calc(100vh - 4.6875rem);
+      visibility: visible;
+      overflow-y: auto;
+    }
+
+    .nav.active .hamburger {
+      border-top-color: transparent;
+    }
+
+    .nav.active .hamburger::before {
+      transform: rotate(135deg);
+    }
+    
+    .nav.active .hamburger::after {
+      transform: rotate(-135deg);
+      top: -0.4375rem;
+    }
+    
+    form {
+        width: 100%; /* Reduza a largura do formulário para 90% da largura da tela */
+        margin: 16px auto; /* Centralize verticalmente e ajuste as margens */
+    }
+
+      .container-cards {
+        flex-direction: column; /* Alterado para uma única coluna em telas menores */
+        align-items: center; /* Adicionado para centralizar horizontalmente */
+        /*se em coluna: width: 100%;*/ /* Largura total em telas menores */
+    }
+
+    .card {
+        width: 90%; /* Largura total dos cartões em telas menores */
+        margin: 16px auto;/*se em coluna: margin: 16px 0;*/ /* Espaçamento entre os cartões */
+    }
+
+    main.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    main.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+
+    .card button {
+        font-size: 70%; /* Diminue o tamanho da fonte dos botões em telas menores */
+    }
+
+    .footer h4 {
+        font-size: 16px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+  }
