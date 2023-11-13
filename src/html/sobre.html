@@ -1,47 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eventos Express</title>
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="/src/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Lexend&display=swap" rel="stylesheet">
     <script defer src="/src/js/script.js"></script>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #FAFAFA;
-        }
-        
-        #container {
-            margin: 50px auto;
-            max-width: 600px;
-            padding: 20px;
-            background-color: #6E6AAA;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        
-        #construction-image {
-            width: 400px;
-            height: auto;
-            margin: 0 auto 20px;
-            display: block;
-        }
-        
-        #construction-text {
-            font-size: 24px;
-            color: #6E6AAA;
-        }
-    </style>
   </head>
   <body>
     <header class="header">
-      <a href="../index.html" class="logo"><img src="../img/logo.jpeg" alt="logo"></a>
+      <a href="/src/index.html" class="logo"><img src="/src/img/home/logo.jpeg" alt="logo"></a>
       <nav class="nav">
         <button
           class="btn-menu"
@@ -53,21 +25,56 @@
           Menu<span class="hamburger"></span>
         </button>
         <ul class="menu" id="menu" role="menu">
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="./construcao.html">Sobre</a></li>
-          <li><a href="./construcao.html">Contato</a></li>
-          <li><a href="./construcao.html">Login</a></li>
+          <li><a href="/src/index.html">Início</a></li>
+          <li><a href="/src/html/sobre.html">Sobre</a></li>
+          <li><a href="/src/html/contato.html">Contato</a></li>
+          <li><a href="/src/html/aut/perfil.html">Perfil</a></li>
+          <li><a href="/src/html/aut/login.html">Login</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="container-construction">
-        <div id="container-construcao">
-            <img id="construction-image" src="../img/under construction.gif" alt="Em Construção">
-            <a href="https://storyset.com/web">Web illustrations by Storyset</a>
-            <p id="construction-text">Em Construção!</p>
+    <div class="title">
+      <h2 class="main-title">Expresso Express</h2>    
+    </div>
+
+    <main>
+      <section class="container-sobre">
+        <div class="sobre">
+          <h2>Fundadores: </h2>
+          <div class="imagemFundadores">
+            <img src="/src/img/outros/do-utilizador.png">
+            <h2>Marino Roberto Conteçotto Júnior e Sirleine Ribeiro da Silva</h2>
+            <img src="/src/img/outros/do-utilizador.png">
+            <h2>Sirleine Ribeiro da Silva</h2>
+            <p>A Eventos Express é uma jovem startup composta por alunos da Fatec de Itu, que compartilham a paixão por realizar os sonhos e proporcionar experiências memoráveis aos seus clientes. 
+              Fundada em [2023], nossa empresa nasceu da visão de transformar o mundo dos eventos, conectando pessoas a oportunidades únicas e inesquecíveis.</p>
+          </div>
+          <div> 
+            <h2>Missão</h2>
+            <p>Nossa missão na Eventos Express é clara: Facilitar o acesso a experiências excepcionais, tornando os sonhos dos nossos clientes em realidade. Através de parcerias estratégicas com hotéis, empresas aéreas, agências de passeios e muitos outros, buscamos proporcionar momentos únicos que enriqueçam a vida de todos que confiam em nós.</p>
+          </div>
+          <div>
+            <h2>Visão</h2>
+            <p>Nossa visão é ser reconhecida como a escolha preferida de quem busca experiências extraordinárias. Queremos ser líderes na indústria de viagens e entretenimento, continuamente inovando para atender às necessidades em constante evolução dos nossos clientes.</p>
+          </div>
+          <div>
+            <h2>Valores</h2>
+            <ul>
+                <li><strong>Excelência:</strong> Buscamos a excelência em tudo o que fazemos, desde a seleção de parceiros até o atendimento ao cliente. Nosso compromisso com a qualidade é inabalável.</li>
+                <li><strong>Integridade:</strong> Agimos com integridade, honestidade e transparência em todas as nossas interações, mantendo a confiança dos nossos clientes e parceiros.</li>
+                <li><strong>Inovação:</strong> Abraçamos a inovação e a tecnologia para oferecer soluções criativas e atualizadas que superem as expectativas.</li>
+                <li><strong>Satisfação do Cliente:</strong> Colocamos o cliente no centro de tudo o que fazemos, garantindo que cada experiência seja inesquecível e personalizada.</li>
+                <li><strong>Trabalho em Equipe:</strong> Valorizamos a colaboração e o trabalho em equipe, reconhecendo que juntos podemos alcançar mais.</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Equipe de Desenvolvimento</h2>
+            <p>Além dos fundadores, a Eventos Express conta com uma talentosa equipe de desenvolvimento de plataforma, composta por dois alunos igualmente dedicados da Fatec de Votorantim.</p>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>
 
     <footer>
       <section class="footer">

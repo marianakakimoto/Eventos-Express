@@ -21,8 +21,19 @@
   }
   
   a {
-    color: var(--white);
-    text-decoration: none;
+    color: var(--white) !important;
+    text-decoration: none  !important;
+  }
+
+  .log{
+    color: #6E6AAA;
+  }
+
+  .aut-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
   }
   
   .header {
@@ -107,7 +118,7 @@
       margin: 0 auto; /* Centraliza o formulário na página */
       width: 30%; /* Define a largura do formulário como 60% do tamanho original */
       /*padding: 20px; Espaçamento interno para melhor aparência */
-      background-color: var(--white);
+      background-color: var(--white)var(--white);
       /*border: 1px solid var(--lilas);*/
       border-radius: 8px;
   }
@@ -152,7 +163,7 @@
     background: var(--cinzaclaro);
     padding: 1rem 1.5rem 1rem;
     border-radius: 10px;
-    border: none;
+    border: none !important;
     box-shadow: 20px 20px 50px -30px var(--roxo);
     max-height: 468px;
     margin: 16px;
@@ -168,23 +179,22 @@
   }
 
   .card img {
-    width: 100%;
+    width: 100%; 
+    height: auto; 
     border-radius: 10px;
   }
-
   /* Adicione os estilos para o contêiner de imagem */
   .card .container-icons {
-    width: 100%;
     max-width: 100%;
     height: 0;
     padding-bottom: 100%;
-    overflow: hidden;
+    overflow: hidden;    
   }
 
   /* Estilos para a imagem dentro do contêiner */
   figure {
     width: 300px;
-    height: 300px;
+    height: 300px;  
   }
 
   .card .container-icons .icon {
@@ -193,20 +203,16 @@
     object-fit: cover;
   }
 
-  /* Foi necessario por conta do carousel, não é possivel usar a classe dele, portanto fiz uma id*/
-  .card .container-icons #icon {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 
   .card h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
     margin: 1rem 0;
     color: var(--roxo);
+
   }
 
-  .btn {
+  .botao {
     background: linear-gradient(to right, var(--roxo), rgba(111, 106, 170, 0.15));  
     padding: 0.5rem 1rem;
     text-transform: uppercase;
@@ -219,9 +225,11 @@
     margin-top: auto;
     margin-bottom: auto;
     transition: background 0.6s ease, color 0.6s ease; /* Adiciona uma transição suave */
+    margin-top: 10px ;
+    margin-bottom: 10px;
   }
 
-  .card button:hover {
+  .card button:hover, .botao:hover{
     background: linear-gradient(to right, rgba(111, 106, 170, 0.15), var(--roxo));
     color: var(--white); /* Altera a cor do texto ao passar o mouse */
   }
@@ -233,6 +241,130 @@
     padding: 20px; /* Espaçamento interno opcional */
   }
 
+  /* Estilo básico da galeria */
+  .container-gallery {
+    width: 50%;
+    margin: 0 auto; /* Centraliza a galeria horizontalmente */
+    margin-top: 20px; /* Adiciona margem superior de 20px */
+    margin-bottom: 20px; /* Adiciona margem inferior de 20px */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas com tamanhos iguais */
+    gap: 10px; /* Espaço entre as fotos */
+    padding: 1rem; /* Adiciona preenchimento interno para o contêiner */
+    background: var(--cinzaclaro);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 20px 20px 50px -30px var(--roxo);
+  }
+
+  /* Estilo das imagens na galeria */
+  .photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Borda arredondada para as imagens */
+  }
+
+  .photo img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  /* Estilo das miniaturas */
+  .thumbnail {
+  cursor: pointer;
+}
+
+/* Estilo do modal em tamanho real (inicialmente oculto) */
+.image-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); /* Fundo escuro semi-transparente */
+  z-index: 999;
+  text-align: center;
+}
+
+.image-modal img {
+  max-height: 90%;
+  max-width: 90%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+  /* Estilo para os botões Anterior e Próximo no modal */
+  .modal-button {
+    font-size: 3em; /* Tamanho da fonte */
+    color: var(--white); /* Cor do texto */
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Remove a borda */
+    cursor: pointer;
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 50%; /* Borda arredondada para criar um botão circular */
+    position: absolute; /* Posição absoluta no modal */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    z-index: 1; /* Coloca os botões na frente do conteúdo */
+  }
+
+  /* Estilo quando o cursor passa sobre os botões */
+  .modal-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo com transparência ao passar o cursor */
+  }
+
+  /* Estilo para o botão "Anterior" */
+  #prev-button {
+    left: 10px; /* Ajusta a posição à esquerda */
+    top: 50%; /* Alinha no centro vertical */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+  }
+
+  /* Estilo para o botão "Próximo" */
+  #next-button {
+    right: 10px; /* Ajusta a posição à direita */
+    top: 50%; /* Alinha no centro vertical */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+  }
+
+  /* Estilo para o botão "Fechar" */
+  #close-button {
+    right: 10px;
+    top: 7%;
+    transform: translateY(-50%);
+}
+  /* Estilo para o cardápio */
+  .card-body ul {
+    list-style: none;
+    color: #6E6AAA;
+    padding-left: 0;
+  }
+
+  /* Alinha o texto à esquerda nas listas */
+  .card-body li {
+    text-align: left;
+    color: #6E6AAA;
+  }
+
+  .card-body h3{
+    text-align: left;
+    color: #6E6AAA;
+  }
+
+  .card-body h2, b{
+    color: #6E6AAA;
+  }
+
+  .conteudo{
+    text-align: left;
+    color: #6E6AAA;
+  }
   /* Estilos padrão para o footer */
   .footer {
     background-color: var(--roxo);
@@ -365,4 +497,200 @@
     .footer p {
         font-size: 12px;
     }
+
+    .photo {
+        flex: 0 0 calc(50% - 20px); /* 2 colunas em telas menores */
+    }
+
+    .container-gallery {
+      width: 90%;
+      grid-template-columns: repeat(2, 1fr); /* Mostrar 2 colunas em telas menores */
+    }
+
+    .image-modal {
+      padding: 1rem; /* Adicione algum espaço interno para melhor aparência */
+    }
+
+    .image-modal img {
+      max-width: 90%; /* Reduza a largura da imagem para caber na tela */
+      max-height: 80vh; /* Limite a altura da imagem para não ultrapassar a tela */
+    }
+
+    .modal-button {
+      font-size: 2em; /* Reduza o tamanho da fonte dos botões em telas menores */
+    }
   }
+  
+  @media (max-width: 480px) {
+      .photo {
+          flex: 1 0 100%; /* Uma coluna em telas muito pequenas */
+      }
+
+      .container-gallery {
+        grid-template-columns: repeat(1, 1fr); /* Mostrar 1 coluna em telas muito pequenas */
+    }
+  }
+  .button-container {
+    display: flex; 
+    gap: 10px; 
+  }
+
+  .perfil h2{
+    color: #6E6AAA;
+  }
+
+ h2, .imagem{
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Estilos para a seção do carrinho de compras */
+  .container-carrinho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    color: var(--roxo);
+    }
+  
+    .container-tabela {
+    text-align: center;
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 20px 20px 50px -30px #6E6AAA;
+    width: 70%; /* Aumente a largura para acomodar melhor a tabela */
+    margin-bottom: 30px ;
+    }
+  
+    .tabela {
+    width: 100%;
+    }
+  
+    .tabela tbody td {
+    padding: 10px;
+    }
+  
+    /* Estilos para o ícone ou thumbnail */
+    .tabela tbody td img {
+      display: inline-block;
+      vertical-align: middle; /* Alinhe verticalmente com o texto */
+      margin-right: 10px; /* Adicione uma margem à direita do ícone */
+      width: 50px; /* Defina a largura desejada para o ícone */
+      height: auto; /* Mantenha a proporção da imagem */
+      border-radius: 5px;
+    }
+    .coluna,h4{
+      margin-bottom: 10px;
+    }
+  
+    .container-form{
+      color: black;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    /* Adiciona rolagem horizontal apenas em telas menores */
+    @media only screen and (max-width: 600px) {
+      table {
+        overflow-x: auto;
+        display: block;
+      }
+
+      th, td {
+        font-size: 12px;
+        white-space: nowrap;
+      }
+    }
+
+    .form{
+      color: black;
+    }
+
+    #qrcode {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%; /* Adicionei isso para garantir que a div preencha completamente a altura */
+    }
+
+    .container-sobre {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--white);
+      padding: 20px;
+      min-height: 100vh;
+      color: var(--roxo);
+  }
+  
+  .sobre {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 20px 20px 50px -30px #6E6AAA;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      max-width: 800px;
+      text-align: center;
+  }
+  
+  .sobre img {
+      width: 100px; /* Tamanho da imagem a ser ajustado conforme necessário */
+      height: 100px;
+      border-radius: 50%;
+  }
+  
+  .sobre h2 {
+      font-size: 24px;
+      padding: 10px;
+  }
+  
+  .sobre p {
+      font-size: 16px;
+      margin: 10px 0;
+      text-align: justify;
+  }
+  
+  .sobre ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+  }
+  
+  .sobre li {
+      font-size: 16px;
+      padding: 5px 0;
+  }
+  
+  .sobre div {
+      margin: 20px 0;
+  }
+
+  .titulo h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6E6AAA;
+  }
+
+  .agradecimento{
+    color: var(--roxo);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+  }
+
+  

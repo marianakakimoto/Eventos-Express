@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="/src/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Lexend&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script defer src="/src/js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
@@ -30,9 +30,10 @@
         </button>
         <ul class="menu" id="menu" role="menu">
           <li><a href="/src/index.html">Início</a></li>
-          <li><a href="/src/html/construcao.html">Sobre</a></li>
-          <li><a href="/src/html/construcao.html">Contato</a></li>
-          <li><a href="/src/html/construcao.html">Login</a></li>
+          <li><a href="/src/html/sobre.html">Sobre</a></li>
+          <li><a href="/src/html/contato.html">Contato</a></li>
+          <li><a href="/src/html/aut/perfil.html">Perfil</a></li>
+          <li><a href="/src/html/aut/login.html">Login</a></li>
         </ul>
       </nav>
     </header>
@@ -44,17 +45,17 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <figure>
-                  <img id="icon" class="d-block w-100" src="/src/img/casamento/01.png">
+                  <img class="d-block w-100 icon" src="/src/img/casamento/01.png">
                 </figure>                      
               </div>
               <div class="carousel-item">
                 <figure>
-                  <img id="icon" class="d-block w-100" src="/src/img/casamento/02.png">
+                  <img class="d-block w-100 icon" src="/src/img/casamento/02.png">
                 </figure>
               </div>
               <div class="carousel-item">
                 <figure>
-                  <img id="icon" class="d-block w-100" src="/src/img/casamento/03.png">
+                  <img class="d-block w-100 icon" src="/src/img/casamento/03.png">
                 </figure>
               </div>
             </div>
@@ -70,7 +71,7 @@
         </div>
         <h3>Espaço Orloff</h3>
         <a href="/src/html/casamento/orloff.html">
-          <button btn="class">Veja Mais</button>
+          <button class="botao">Veja Mais</button>
         </a>
       </section>    
 
@@ -80,17 +81,17 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <figure>
-                  <img id="icon" class="d-block w-100" src="/src/img/casamento/04.png">
+                  <img class="d-block w-100 icon" src="/src/img/casamento/04.png">
                 </figure>                      
               </div>
               <div class="carousel-item">
                 <figure>
-                  <img id="icon" class="d-block w-100" src="/src/img/casamento/05.png">
+                  <img class="d-block w-100 icon" src="/src/img/casamento/05.png">
                 </figure>
               </div>
               <div class="carousel-item">
                 <figure>
-                  <img id="icon" class= "d-block w-100" src="/src/img/casamento/06.png">
+                  <img class= "d-block w-100 icon" src="/src/img/casamento/06.png">
                 </figure>
               </div>
             </div>
@@ -104,50 +105,49 @@
             </a>
           </div>
         </div>
-          <h3>Espaço Le France</h3>
-          <a href="/src/html/casamento/lefrance.html">
-            <button btn="class">Veja Mais</button>
-          </a> 
-
-
+        <h3>Espaço Le France</h3>
+        <a href="/src/html/casamento/lefrance.html">
+          <button class="botao">Veja Mais</button>
+        </a> 
+      </section>
+    
       <section class="card card-felicita">
-          <div class="container-icons">                
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <figure>
-                    <img id="icon" class="d-block w-100" src="/src/img/casamento/07.png">
-                  </figure>                      
-                </div>
-                <div class="carousel-item">
-                  <figure>
-                    <img id="icon" class="d-block w-100" src="/src/img/casamento/08.png">
-                  </figure>
-                </div>
-                <div class="carousel-item">
-                  <figure>
-                    <img id="icon" class= "d-block w-100" src="/src/img/casamento/09.png">
-                  </figure>
-                </div>
+        <div class="container-icons">                
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <figure>
+                  <img class="d-block w-100 icon" src="/src/img/casamento/07.png">
+                </figure>                      
               </div>
-              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only"></span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only"></span>
-              </a>
+              <div class="carousel-item">
+                <figure>
+                  <img class="d-block w-100 icon" src="/src/img/casamento/08.png">
+                </figure>
+              </div>
+              <div class="carousel-item">
+                <figure>
+                  <img  class= "d-block w-100 icon" src="/src/img/casamento/09.png">
+                </figure>
+              </div>
             </div>
-          </div>
-            <h3>Espaço Felicitá</h3>
-            <a href="/src/html/casamento/felicita.html">
-              <button btn="class">Veja Mais</button>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only"></span>
             </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only"></span>
+            </a>
+          </div>
+        </div>
+        <h3>Espaço Felicitá</h3>
+        <a href="/src/html/casamento/felicita.html">
+          <button class="botao">Veja Mais</button>
+        </a>
       </section>
     </main>
-    </section>
-       
+           
     <footer>
       <section class="footer">
         <div class="about">

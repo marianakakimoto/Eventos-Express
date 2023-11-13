@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Lexend&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script defer src="/src/js/script.js"></script>
   </head>
   <body>
@@ -26,35 +27,39 @@
         </button>
         <ul class="menu" id="menu" role="menu">
           <li><a href="/src/index.html">Início</a></li>
-          <li><a href="/src/html/construcao.html">Sobre</a></li>
-          <li><a href="/src/html/construcao.html">Contato</a></li>
-          <li><a href="/src/html/construcao.html">Login</a></li>
+          <li><a href="/src/html/sobre.html">Sobre</a></li>
+          <li><a href="/src/html/aut/perfil.html">Perfil</a></li>
+          <li><a href="/src/html/aut/login.html">Login</a></li>
         </ul>
       </nav>
     </header>
 
     <div class="container-form">
       <form>
-        <label for="data">Data do Evento:</label>
-        <input type="date" id="data" name="data" required>
-
-        <label for="local">Local do Evento:</label>
-        <input type="text" id="local" name="local" required>
-
-        <label for="convidados">Número de Convidados:</label>
-        <select id="convidados" name="convidados" required>
+        <div class="form-group">
+          <label for="data">Data do Evento:</label>
+          <input type="date" class="form-control" id="data" name="data" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="local">Local do Evento:</label>
+          <input type="text" class="form-control" id="local" name="local" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="convidados">Número de Convidados:</label>
+          <select class="form-control" id="convidados" name="convidados" required>
             <option value="">Selecione o número de convidados</option>
-            <option value="10">10 convidados</option>
-            <option value="20">20 convidados</option>
-            <option value="30">30 convidados</option>
-            <option value="40">40 convidados</option>
-            <option value="50">50 convidados</option>
-        </select>
-
-        <button class="btn btn-enviar" type="submit">Enviar</button>
+            <option value="50">50</option>
+            <option value="50">100</option>
+            <option value="50">200</option>
+          </select>
+        </div>
+    
+        <button class="botao" type="submit">Enviar</button>
       </form>
     </div>
-
+    
     <div class="title">
       <h2 class="main-title">Escolha o Evento</h2>    
     </div>
@@ -68,7 +73,7 @@
         </div>
         <h3>Casamento</h3>
         <a href="/src/html/casamento.html">
-        <button class="btn">Veja Mais</button>
+        <button class="botao">Veja Mais</button>
         </a>
       </section>
 
@@ -80,7 +85,7 @@
         </div>
         <h3>Corporativo</h3>
         <a href="/src/html/corporativo.html">
-          <button class="btn">Veja Mais</button>
+          <button class="botao">Veja Mais</button>
         </a> 
       </section>
 
@@ -92,7 +97,7 @@
         </div>
         <h3>Debutante</h3>
         <a href="/src/html/debutante.html">
-          <button class="btn">Veja Mais</button>
+          <button class="botao">Veja Mais</button>
         </a>
       </section>
 
@@ -104,7 +109,7 @@
         </div>
         <h3>Aniversário</h3>
         <a href="/src/html/aniversario.html">
-          <button class="btn">Veja Mais</button>
+          <button class="botao">Veja Mais</button>
         </a>
       </section>
     </main>

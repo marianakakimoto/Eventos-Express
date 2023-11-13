@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos Express</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Lexend&display=swap" rel="stylesheet">
+    <script defer src="/src/js/script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/src/index.html" class="logo"><img src="/src/img/home/logo.jpeg" alt="logo"></a>
+      <nav class="nav">
+        <button
+          class="btn-menu"
+          aria-label="Abrir Menu"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          Menu<span class="hamburger"></span>
+        </button>
+        <ul class="menu" id="menu" role="menu">
+          <li><a href="/src/index.html">Início</a></li>
+          <li><a href="/src/html/sobre.html">Sobre</a></li>
+          <li><a href="/src/html/contato.html">Contato</a></li>
+          <li><a href="/src/html/aut/perfil.html">Perfil</a></li>
+          <li><a href="/src/html/aut/login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="title">
+        <h2 class="main-title">Carrinho de Compras</h2>    
+    </div>
+    <main>
+      <section class="container-carrinho">
+        <div class="container-tabela">
+          <table class="tabela">
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Subtotal</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="produto1">
+                <td>
+                  <img src="/src/img/casamento/01.png" alt="Produto 1" />
+                  Produto 1
+                </td>
+                <td>R$ 50.00</td>
+                <td>2</td>
+                <td>R$ 100.00</td>
+                <td><button class="botao" onclick="removerItem('produto1')">Remover</button></td>
+              </tr>
+              <tr id="produto2">
+                <td>
+                  <img src="/src/img/casamento/02.png" alt="Produto 2" />
+                  Produto 2
+                </td>
+                <td>R$ 30.00</td>
+                <td>3</td>
+                <td>R$ 90.00</td>
+                <td><button class="botao" onclick="removerItem('produto2')">Remover</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="container-total">
+            <div class="coluna">
+              <h4>Total: R$ 190.00</h4>
+              <a href="/src/html/shop/confirmacao.html" class="botao">Finalizar Compra</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+        <section class="footer">
+          <div class="about">
+            <h4>Sobre</h4>          
+            <a href="/src/html/sobre.html">Somos uma startup voltada para eventos</a>
+          </div>
+          
+          <div class="contact">
+            <h4>Contato</h4>
+            <a href="/src/html/contato.html">contato@eventosexpress.com.br</a>
+          </div>
+          
+          <div class="social-media">
+            <h4>Nossas Redes Sociais</h4>          
+            <nav class="icons">
+              <a href="https://www.facebook.com/?locale=pt_BR"><img src="/src/img/home/facebook.png" width="15" alt="icone facebook" style="filter: invert(100%);"></a>
+              <a href="https://www.instagram.com/"><img src="/src/img/home/instagram.png" width="30" alt="icone instagram" style="filter: invert(100%);"></a>
+              <a href="https://www.whatsapp.com/?lang=pt_BR"><img src="/src/img/home/whatsapp.png" width="30" alt="icone whatsapp" style="filter: invert(100%);"></a>
+            </nav>
+          </div>
+  
+          <div class="signature">
+            <p>&copy; 2023 Eventos Express. Todos os direitos reservados.</p>
+          </div>
+        </section>
+      </footer>
+    </body>
+  </html>
