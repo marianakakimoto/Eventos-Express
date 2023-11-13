@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos Express</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Lexend&display=swap" rel="stylesheet">
+    <script defer src="/src/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/src/index.html" class="logo"><img src="/src/img/home/logo.jpeg" alt="logo"></a>
+      <nav class="nav">
+        <button
+          class="btn-menu"
+          aria-label="Abrir Menu"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          Menu<span class="hamburger"></span>
+        </button>
+        <ul class="menu" id="menu" role="menu">
+          <li><a href="/src/index.html">Início</a></li>
+          <li><a href="/src/html/sobre.html">Sobre</a></li>
+          <li><a href="/src/html/contato.html">Contato</a></li>
+          <li><a href="/src/html/aut/perfil.html">Perfil</a></li>
+          <li><a href="/src/html/aut/login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container-cards">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card h-100 my-auto">
+                        <h2><b>Americano</b></h2>
+                        <div class="card-body overflow-auto">
+                        <h3>Canapê de damasco</h3>
+                        <ul>
+                            <li>Torradas servidas com mousse au chèvre (musse de queijo de cabra)</li>
+                            <li>Miniquiche de funghi secchi</li>
+                            <li>Vol-au-vent de vieira</li>
+                        </ul>
+
+                        <h3>Prato quente</h3>
+                        <ul>
+                            <li>Peito de pato com molho de laranja ou</li>
+                            <li>Peito de peru com molho de amora ou</li>
+                            <li>Peito de peru defumado com lentilha</li>
+                        </ul>
+
+                        <h3>Sobremesa</h3>
+                        <ul>
+                            <li>Salada de frutas com creme de vinho do Porto</li>
+                            <li>Sorvete de baunilha com creme de papaia</li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 my-auto">
+                        <h2><b>Finge Food</b></h2>
+                        <div class="card-body overflow-auto">
+                          <ul>
+                            <li>Salada Caprese - Uma releitura da tradicional e refrescante combinação e doçura do tomatinho cereja com o frescor e equilíbrio da mozzarella de búfala com molho de manjericão e azeite e nozes;</li>
+                            <li>Risoto à Parmegiana - Nosso tradicional Risoto extremamente cremoso aromatizado com vinho branco seco e finalizado com legítimo queijo grana padano;</li>
+                            <li>Risoto de Gamberi com Queijo Coalho - Camarões levemente refogados no sal e alho, servidos envoltos do nosso tradicional Risoto extremamente cremoso aromatizado com vinho branco seco e finalizado com raspas de queijo coalho;</li>
+                            <li>Risoto ao Pesto de Manjericão - Nosso tradicional Risoto extremamente cremoso aromatizado com vinho branco seco e finalizado com um delicioso molho de manjericão fresco e azeite de oliva extra virgem;</li>
+                            <li>Risoto de Melanzane - Berinjela e pimentões frescos assados no azeite de oliva extra virgem e servidos envoltos do nosso tradicional Risoto extremamente cremoso aromatizado com vinho branco seco;</li>
+                            <li>Penne ao Molho Carbonara - O Tradicional Molho de gema de ovos rapidamente cozidos sobre uma camada de bacon com parmesão ralado juntos traz uma cremosidade incrível à boca;</li>
+                            <li>Gnocchi de Batatas com Molho 3 Formaggios - Nosso delicioso Nhoque caseiro que derrete na boca com um delicioso molho aveludado e aromatizado com noz moscada e com os queijos, parmesão, queijo cremoso e gorgonzola;</li>
+                            <li>Escondidinho de Carne Seca com Queijo - Carne seca macia puxada na manteiga com nosso delicioso purê de batatas inglesas que faz total equilíbrio e harmonia na sua boca;</li>
+                            <li>Escondidinho de Frango com Catupiry - Filé de frango desfiado e refogado com queijo cremoso com nosso delicioso purê de batatas inglesas que faz total equilíbrio e harmonia na sua boca;</li>
+                        </ul>
+                        <ul>Finalização: Mesa de Café</ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 my-auto">
+                        <h2><b>Happy Hours</b></h2>
+                        <div class="card-body overflow-auto">
+                          <h3>Bebidas Tradicionais</h3>
+                          <ul>
+                              <li>Refrigerante Normal e ZERO (Coca e Guaraná)</li>
+                              <li>Água Aromatizada</li>
+                              <li>Água Mineral sem Gás</li>
+                          </ul>
+
+                          <h3>Bebidas Geladas - Escolher 2 Sabores</h3>
+                          <ul>
+                              <li>Suco de Laranja</li>
+                              <li>Suco de Maracujá com Gengibre</li>
+                              <li>Suco de Abacaxi com Hortelã</li>
+                              <li>Suco de Limão com Manjericão</li>
+                              <li>Chá Mate com Limão</li>
+                              <li>Chá Capim Cidreira com Limão</li>
+                          </ul>
+
+                          <h3>Petiscos e Iscas - Porção Mista</h3>
+                          <ul>
+                              <li>Azeitonas Verdes</li>
+                              <li>Salame</li>
+                              <li>Presunto</li>
+                              <li>Peito de Peru</li>
+                              <li>Gorgonzola</li>
+                              <li>Queijo Branco</li>
+                              <li>Muçarela</li>
+                              <li>Cebolinhas em Conservas</li>
+                              <li>Pimentas Biquinho</li>
+                          </ul>
+
+                          <h3>Festival de Petiscos - Quentes</h3>
+                          <ul>
+                              <li>Bolinho de Bacalhau</li>
+                              <li>Croquete de Carne Seca</li>
+                              <li>Bolinha de Queijo</li>
+                              <li>Bolinha de Calabresa Defumada</li>
+                              <li>Coxinha TRADICIONAL</li>
+                              <li>Empada de Palmito</li>
+                              <li>Empada de Frango</li>
+                              <li>Esfiha de Carne de Carne</li>
+                              <li>Esfiha de Frango</li>
+                              <li>Quibe TRADICIONAL</li>
+                              <li>Mini Pastel de Carne, Queijo e Frango</li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+  
+    <footer>
+      <section class="footer">
+        <div class="about">
+          <h4>Sobre</h4>          
+          <a href="/src/html/sobre.html">Somos uma startup voltada para eventos</a>
+        </div>
+        
+        <div class="contact">
+          <h4><a href="/src/html/contato.html">Contato</a></h4>
+          <p>contato&commat;eventosexpress.com.br</p>
+        </div>       
+        
+        <div class="social-media">
+          <h4>Nossas Redes Sociais</h4>          
+          <nav class="icons">
+            <a href="https://www.facebook.com/?locale=pt_BR"><img src="/src/img/home/facebook.png" width="15" alt="icone facebook" style="filter: invert(100%);"></a>
+            <a href="https://www.instagram.com/"><img src="/src/img/home/instagram.png" width="30" alt="icone instagram" style="filter: invert(100%);"></a>
+            <a href="https://www.whatsapp.com/?lang=pt_BR"><img src="/src/img/home/whatsapp.png" width="30" alt="icone whatsapp" style="filter: invert(100%);"></a>
+          </nav>
+        </div>
+
+        <div class="signature">
+          <p>&copy; 2023 Eventos Express. Todos os direitos reservados.</p>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

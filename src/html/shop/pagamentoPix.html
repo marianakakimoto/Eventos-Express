@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos Express - Pagamento Pix</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Lexend&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script defer src="/src/js/script.js"></script>
+    <!-- Inclua as bibliotecas necessárias para o QR Code e para a funcionalidade de cópia -->
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/src/index.html" class="logo"><img src="/src/img/home/logo.jpeg" alt="logo"></a>
+      <nav class="nav">
+        <button
+          class="btn-menu"
+          aria-label="Abrir Menu"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          Menu<span class="hamburger"></span>
+        </button>
+        <ul class="menu" id="menu" role="menu">
+            <li><a href="/src/index.html">Início</a></li>
+            <li><a href="/src/html/sobre.html">Sobre</a></li>
+            <li><a href="/src/html/contato.html">Contato</a></li>
+            <li><a href="/src/html/aut/perfil.html">Perfil</a></li>
+            <li><a href="/src/html/aut/login.html">Login</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div class="title">
+      <h2 class="main-title">Confirmação</h2>    
+    </div>
+
+    <main>
+      <section class="container-carrinho">
+        <div class="container-tabela">
+          <h2>Página de Pagamento</h2>
+          <div class="container-form">
+            <form action="/processar-pix" method="post">
+              <div class="form-group">
+                <!-- Imagem do QR Code gerada dinamicamente -->
+                <div id="qrcode"></div>
+                <br>
+
+                <!-- Campo de texto para a chave Pix fictícia -->
+                <label for="chave-pix">Chave Pix:</label>
+                <input type="text" class="form-control" id="chave-pix" name="chave-pix" readonly>
+                <!-- Botão para copiar a chave Pix -->
+                <button class="botao" type="button" id="copiar-chave" data-clipboard-target="#chave-pix">Copiar</button>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <section class="footer">
+        <div class="about">
+          <h4>Sobre</h4>          
+          <a href="/src/html/sobre.html">Somos uma startup voltada para eventos</a>
+        </div>
+        
+        <div class="contact">
+          <h4><a href="/src/html/contato.html">Contato</a></h4>
+          <p>contato&commat;eventosexpress.com.br</p>
+        </div>       
+        
+        <div class="social-media">
+          <h4>Nossas Redes Sociais</h4>          
+          <nav class="icons">
+            <a href="https://www.facebook.com/?locale=pt_BR"><img src="/src/img/home/facebook.png" width="15" alt="icone facebook" style="filter: invert(100%);"></a>
+            <a href="https://www.instagram.com/"><img src="/src/img/home/instagram.png" width="30" alt="icone instagram" style="filter: invert(100%);"></a>
+            <a href="https://www.whatsapp.com/?lang=pt_BR"><img src="/src/img/home/whatsapp.png" width="30" alt="icone whatsapp" style="filter: invert(100%);"></a>
+          </nav>
+        </div>
+
+        <div class="signature">
+          <p>&copy; 2023 Eventos Express. Todos os direitos reservados.</p>
+        </div>
+      </section>
+    </footer>
+
+    <script>
+      // Gerar o QR Code e inicializar a funcionalidade de cópia ao carregar a página
+      document.addEventListener('DOMContentLoaded', function () {
+        var qrcode = new QRCode(document.getElementById('qrcode'), {
+          text: 'chave-pix-ficticia',
+          width: 128,
+          height: 128,
+        });
+
+        var clipboard = new ClipboardJS('#copiar-chave');
+      });
+    </script>
+  </body>
+</html>

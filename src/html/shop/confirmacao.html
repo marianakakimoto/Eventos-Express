@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventos Express</title>
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Lexend&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script defer src="/src/js/script.js"></script> 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  // Função para redirecionar com base no método de pagamento selecionado
+  function redirecionarPagina() {
+    var metodoPagamento = document.getElementById("metodo-pagamento").value;
+    var paginaDestino;
+
+    switch (metodoPagamento) {
+      case "cartao-credito":
+        paginaDestino = "/src/html/shop/pagamentoCredito.html";
+        break;
+      case "cartao-debito":
+        paginaDestino = "/src/html/shop/pagamentoDebito.html";
+        break;
+      case "pix":
+        paginaDestino = "/src/html/shop/pagamentoPix.html";
+        break;
+      case "boleto":
+        paginaDestino = "/src/html/shop/pagamentoBoleto.html";
+        break;
+    }
+
+    // Redirecionar para a página correta
+    window.location.href = paginaDestino;
+  }
+
+  // Adicionar um ouvinte de evento ao botão "Finalizar Compra"
+  var btnFinalizarCompra = document.getElementById("btnFinalizarCompra");
+  btnFinalizarCompra.addEventListener("click", function (event) {
+    event.preventDefault(); // Evitar o envio padrão do formulário
+    redirecionarPagina(); // Chamar a função de redirecionamento
+  });
+});
+
+  </script>
+</head>
+<body>
+  <header class="header">
+    <a href="/src/index.html" class="logo"><img src="/src/img/home/logo.jpeg" alt="logo"></a>
+    <nav class="nav">
+      <button
+        class="btn-menu"
+        aria-label="Abrir Menu"
+        aria-haspopup="true"
+        aria-controls="menu"
+        aria-expanded="false"
+      >
+        Menu<span class="hamburger"></span>
+      </button>
+      <ul class="menu" id="menu" role="menu">
+        <li><a href="/src/index.html">Início</a></li>
+        <li><a href="/src/html/sobre.html">Sobre</a></li>
+        <li><a href="/src/html/contato.html">Contato</a></li>
+        <li><a href="/src/html/aut/perfil.html">Perfil</a></li>
+        <li><a href="/src/html/aut/login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="title">
+    <h2 class="main-title">Confirmação</h2>    
+  </div>
+
+  <main>
+    <section class="container-carrinho">
+      <div class="container-tabela">
+        <div class="summary">
+          <h2>Resumo da Compra</h2>
+          <!-- Exibir resumo dos itens do carrinho aqui -->
+        </div>        
+        <form class="form" id="formFinalizarCompra">
+          <div class="form-group">
+            <label for="data">Data:</label>
+            <input type="date" class="form-control" id="data" name="data" required readonly>
+
+            <label for="cidade">Local:</label>
+            <input type="text" class="form-control" id="cidade" name="cidade" value="Buffet Infantil Alegria" required readonly>
+
+            <label for="pacote">Pacote:</label>
+            <input type="text" class="form-control" id="pacote" name="pacote" value="Aniversário" readonly>
+
+            <label for="endereco">Endereço:</label>
+            <select class="form-control" id="endereco" name="endereco">
+              <option value="end1">Avenida das Nações, 230</option>
+              <option value="end2">Avenida São Paulo, 300</option>
+            </select>
+
+            <label for="metodo-pagamento">Método de Pagamento:</label>
+            <select class="form-control" id="metodo-pagamento" name="metodo-pagamento">
+              <option value="cartao-credito">Cartão de Crédito</option>
+              <option value="cartao-debito">Cartão de Débito</option>
+              <option value="pix">Pix</option>
+              <option value="boleto">Boleto</option>
+            </select>
+          </div>
+          <button class="botao" id="btnFinalizarCompra">Finalizar Compra</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <section class="footer">
+      <div class="about">
+        <h4>Sobre</h4>          
+        <a href="/src/html/sobre.html">Somos uma startup voltada para eventos</a>
+      </div>
+      
+      <div class="contact">
+        <h4><a href="/src/html/contato.html">Contato</a></h4>
+        <p>contato&commat;eventosexpress.com.br</p>
+      </div>       
+      
+      <div class="social-media">
+        <h4>Nossas Redes Sociais</h4>          
+        <nav class="icons">
+          <a href="https://www.facebook.com/?locale=pt_BR"><img src="/src/img/home/facebook.png" width="15" alt="icone facebook" style="filter: invert(100%);"></a>
+          <a href="https://www.instagram.com/"><img src="/src/img/home/instagram.png" width="30" alt="icone instagram" style="filter: invert(100%);"></a>
+          <a href="https://www.whatsapp.com/?lang=pt_BR"><img src="/src/img/home/whatsapp.png" width="30" alt="icone whatsapp" style="filter: invert(100%);"></a>
+        </nav>
+      </div>
+
+      <div class="signature">
+        <p>&copy; 2023 Eventos Express. Todos os direitos reservados.</p>
+      </div>
+    </section>
+  </footer>
+
+  <!-- Adicione os scripts do Bootstrap no final do corpo para melhor desempenho -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Eventos Express</title>
+        <link rel="stylesheet" href="/src/css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Lexend&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script defer src="/src/js/script.js"></script>
+      </head>
+<body>
+    <header class="header">
+        <a href="/src/index.html" class="logo"><img src="/src/img/home/logo.jpeg" alt="logo"></a>
+        <nav class="nav">
+          <button
+            class="btn-menu"
+            aria-label="Abrir Menu"
+            aria-haspopup="true"
+            aria-controls="menu"
+            aria-expanded="false"
+          >
+            Menu<span class="hamburger"></span>
+          </button>
+          <ul class="menu" id="menu" role="menu">
+            <li><a href="/src/index.html">Início</a></li>
+            <li><a href="/src/html/sobre.html">Sobre</a></li>
+            <li><a href="/src/html/contato.html">Contato</a></li>
+            <li><a href="/src/html/aut/perfil.html">Perfil</a></li>
+            <li><a href="/src/html/aut/login.html">Login</a></li>
+          </ul>
+        </nav>
+      </header>
+<div class="container mt-5">
+  <form>
+    <div class="titulo">
+      <h2>Pacote Debutante Monazetti Festas & Eventos </h2>
+    </div>
+    <div class="form-group">
+      <label for="data">Data do Evento:</label>
+      <input type="date" class="form-control" id="data" required>
+    </div>
+
+    <div class="form-group">
+      <label for="local">Local:</label>
+      <select class="form-control" id="local">
+        <option value="partello">Monazetti Festas & Eventos</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="decoracao">Decoração:</label>
+      <select class="form-control" id="decoracao">
+        <option value="borboleta">Borboleta</option>
+        <option value="prata">Prata</option>
+        <option value="azulBebe">Azul Bebê</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="cardapio">Cardápio:</label>
+      <select class="form-control" id="cardapio">
+        <option value="happyHour">Happy Hours</option>
+        <option value="coquetel">Coquetel</option>
+        <option value="churrasco">Churrasco</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+        <label for="incluso">Incluso:</label>
+        <input type="text" class="form-control" id="incluso" value="Espaço, Decoração, DJ e Buffet" readonly>
+      </div>
+
+    <div class="form-group">
+      <label for="total">Valor Total:</label>
+      <input type="text" class="form-control" id="total" value="R$ 19.900" readonly>
+    </div>
+
+    <button type="button" class="botao"><a href="/src/html/shop/carrinho.html">Adicionar ao Carrinho</a></button>
+  </form>
+</div>
+<footer>
+  <section class="footer">
+    <div class="about">
+      <h4>Sobre</h4>          
+      <a href="/src/html/sobre.html">Somos uma startup voltada para eventos</a>
+    </div>
+    
+    <div class="contact">
+      <h4><a href="/src/html/contato.html">Contato</a></h4>
+      <p>contato&commat;eventosexpress.com.br</p>
+    </div>       
+    
+    <div class="social-media">
+      <h4>Nossas Redes Sociais</h4>          
+      <nav class="icons">
+        <a href="https://www.facebook.com/?locale=pt_BR"><img src="/src/img/home/facebook.png" width="15" alt="icone facebook" style="filter: invert(100%);"></a>
+        <a href="https://www.instagram.com/"><img src="/src/img/home/instagram.png" width="30" alt="icone instagram" style="filter: invert(100%);"></a>
+        <a href="https://www.whatsapp.com/?lang=pt_BR"><img src="/src/img/home/whatsapp.png" width="30" alt="icone whatsapp" style="filter: invert(100%);"></a>
+      </nav>
+    </div>
+
+    <div class="signature">
+      <p>&copy; 2023 Eventos Express. Todos os direitos reservados.</p>
+    </div>
+  </section>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

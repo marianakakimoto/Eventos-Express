@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos Express</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Lexend&display=swap" rel="stylesheet">
+    <script defer src="/src/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/src/index.html" class="logo"><img src="/src/img/home/logo.jpeg" alt="logo"></a>
+      <nav class="nav">
+        <button
+          class="btn-menu"
+          aria-label="Abrir Menu"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          Menu<span class="hamburger"></span>
+        </button>
+        <ul class="menu" id="menu" role="menu">
+          <li><a href="/src/index.html">Início</a></li>
+          <li><a href="/src/html/sobre.html">Sobre</a></li>
+          <li><a href="/src/html/contato.html">Contato</a></li>
+          <li><a href="/src/html/aut/perfil.html">Perfil</a></li>
+          <li><a href="/src/html/aut/login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container-cards">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card h-100 my auto">
+                        <h2><b>Finger Food</b></h2>
+                        <div class="card-body overflow-auto">
+                          <h3>ENTRADAS</h3>
+                          <ul>
+                              <li>Canoles de alho poró</li>
+                              <li>Mini Bombons de azeitona verde</li>
+                              <li>Mini pastéis assados de damasco com ricota</li>
+                              <li>Quiches de queijo</li>
+                              <li>Quiches Lorraine</li>
+                              <li>Trouxinhas de carne-seca</li>
+                          </ul>
+                      
+                          <h3>FINGER FOOD</h3>
+                          <ul>
+                              <li>Mini-wrap de peito de peru, rúcula e coalhada seca</li>
+                              <li>Caprese no palito de tomate-cereja, mussarela de búfala e manjericão fresco regado ao azeite aromatizado</li>
+                              <li>Guacamole servida em copinhos individuais com nachos para degustação</li>
+                              <li>Tiras de chuleta grelhada acompanhada de farofa de banana da terra</li>
+                              <li>Nhoque de mandioquinha servido em ramequim individual, gratinado aos dois molhos e queijo parmesão.</li>
+                          </ul>
+                      
+                          <h3>BEBIDAS</h3>
+                          <ul>
+                              <li>Refrigerantes (Coca-Cola, Coca-Cola Zero, Guaraná Antárctica)</li>
+                              <li>Água mineral</li>
+                              <li>Sucos de frutas industrializados (abacaxi e manga)</li>
+                          </ul>
+                      
+                          <h3>ENCERRAMENTO</h3>
+                          <ul>Café com petit-fours</ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 my auto">
+                        <h2><b> Empratamento</b></h2>
+                        <div class="card-body overflow-auto">
+                          <h3>ENTRADAS</h3>
+                          <ul>
+                              <li>Sucos de polpa de frutas:</li>
+                                  <ul>
+                                      <li>Manga</li>
+                                      <li>Goiaba</li>
+                                      <li>Acerola</li>
+                                      <li>Abacaxi</li>
+                                      <li>Abacaxi c/ hortelã</li>
+                                      <li>Laranja</li>
+                                  </ul>
+                              <li>Refrigerantes de primeira linha:
+                                  <ul>
+                                      <li>Coca-Cola normal</li>
+                                      <li>Coca-Cola zero</li>
+                                      <li>Guaraná Antártica normal</li>
+                                      <li>Guaraná Antártica zero</li>
+                                      <li>Fanta laranja</li>
+                                  </ul>
+                              </li>
+                              <li>Coquetel sem álcool (dois sabores):
+                                  <ul>
+                                      <li>Morango</li>
+                                      <li>Cajá</li>
+                                      <li>Maracujá</li>
+                                  </ul>
+                              </li>
+                              <li>Água sem gás</li>
+                              <li>Salgados fritos diversos</li>
+                              <li>Salgados folhados diversos</li>
+                          </ul>
+                      
+                          <h3>PRINCIPAL (três opções)</h3>
+                          <ul>
+                              <li>Risoto de Camarão</li>
+                              <li>Risoto de Carne</li>
+                              <li>Risoto de Queijo com Bacon</li>
+                              <li>Risoto de Linguiça de Frango</li>
+                              <li>Risoto de Linguiça de Porco</li>
+                              <li>Risoto vegetariano (brócolis, espinafre, cenoura, couve flor, ervilhas)</li>
+                              <li><strong>Risottonoir (arroz preto ao camarão ou linguiça ou bacon e calabresa)</strong> com valor extra</li>
+                          </ul>
+                      
+                          <h3>Escondidinho</h3>
+                          <ul>
+                              <li>Escondidinho de mandioca ao parmesão</li>
+                              <li>Escondidinho de Filé de Frango</li>
+                              <li>Escondidinho de Carne</li>
+                              <li>Escondidinho de Carne de Sol</li>
+                              <li>Escondidinho de Linguiça de Porco</li>
+                              <li>Escondidinho de Linguiça de Frango</li>
+                              <li>Escondidinho de Frango</li>
+                              <li>Escondidinho de Batata</li>
+                              <li>Escondidinho de Mandioca com Parmesão</li>
+                              <li>Escondidinho de Mandioca com Carne Moída</li>
+                          </ul>
+                      
+                          <h3>MESA DE ENCERRAMENTO</h3>
+                          <ul>
+                              <li>Café ou leite caramelizado</li>
+                              <li>* caso permaneça a pandemia será servido pelos garçons no final da festa.</li>
+                              <li>Brunch</li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class ="card h-100 my auto">
+                        <h2><b>Francesa</b></h2>
+                        <div class="card-body overflow-auto">
+                          <h3>Bebidas tradicionais</h3>
+                          <ul>
+                              <li>Água mineral sem gás</li>
+                              <li>Refrigerante Normal (Coca e Guaraná)</li>
+                              <li>Refrigerante ZERO (Coca e Guaraná)</li>
+                          </ul>
+                      
+                          <h3>Bebidas quentes</h3>
+                          <ul>
+                              <li>Café</li>
+                              <li>Leite</li>
+                              <li>Achocolatado</li>
+                          </ul>
+                      
+                          <h3>Bebidas geladas - Escolher 2 sabores</h3>
+                          <ul>
+                              <li>Suco de Laranja</li>
+                              <li>Suco de Maracujá com gengibre</li>
+                              <li>Suco de Abacaxi com hortelã</li>
+                              <li>Suco de Limão com manjericão</li>
+                              <li>Chá Mate com limão</li>
+                              <li>Chá Capim Cidreira com limão</li>
+                          </ul>
+                      
+                          <h3>Salada de frutas da estação</h3>
+                      
+                          <h3>Folhados assados</h3>
+                          <ul>
+                              <li>Mini bauruzinho</li>
+                              <li>Mini folhado de frango</li>
+                              <li>Mini brioche de calabresa</li>
+                          </ul>
+                      
+                          <h3>Mini sanduíches - Escolher 2 tipos</h3>
+                          <ul>
+                              <li>Mortadela Ceratti com maionese e tomate no mini pão australiano</li>
+                              <li>Presunto, queijo e maionese exclusiva no mini brioche de mandioquinha</li>
+                              <li>Cenoura ralada com pasta de queijo branco no mini pão de grãos</li>
+                              <li>Salame com queijo e maionese exclusiva no mini pão rústico</li>
+                              <li>Lombo canadense com queijo e pasta na mini baguete</li>
+                              <li>Peito de Peru com queijo e manjericão</li>
+                          </ul>
+                      
+                          <h3>Quentes - Escolher 4 tipos</h3>
+                          <ul>
+                              <li>Quiche 4 queijos</li>
+                              <li>Quiche Lorraine</li>
+                              <li>Quiche de alho-poró</li>
+                              <li>Quiche provolone</li>
+                              <li>Quiche salame com provolone</li>
+                              <li>Quiche de ricota</li>
+                              <li>Bolinho de Bacalhau</li>
+                              <li>Bom-bocado de carne seca</li>
+                              <li>Crispy de queijo</li>
+                              <li>Bolinha de calabresa defumada</li>
+                              <li>Coxinha Villeroy</li>
+                              <li>Coxinha TRADICIONAL</li>
+                              <li>Empada de Palmito</li>
+                              <li>Empada de Frango</li>
+                              <li>Esfiha de carne de Carne</li>
+                              <li>Esfiha de frango</li>
+                              <li>Quibe TRADICIONAL</li>
+                              <li>Risóli</li>
+                              <li>Saltenha de calabresa</li>
+                              <li>Saltenha de frango</li>
+                              <li>Saltenha de camarão</li>
+                              <li>Pastel assado de calabresa com ricota</li>
+                          </ul>
+                      
+                          <h3>Finger Foods - Escolher 2 tipos</h3>
+                          <ul>
+                              <li>Salada caprese - Uma releitura da tradicional combinação de tomatinhos cereja com mozzarella de búfala e molho de manjericão</li>
+                              <li>Risoto à parmegiana - Risoto extremamente cremoso aromatizado com vinho branco e queijo grana Padano</li>
+                              <li>Risoto de Gamberi com queijo coalho - Risoto com camarões e queijo coalho</li>
+                              <li>Risoto ao Pesto de manjericão - Risoto aromatizado com molho de manjericão</li>
+                              <li>Risoto de Melanzane - Risoto com berinjela e pimentões</li>
+                              <li>Penne ao molho carbonara - Molho de gema de ovos, bacon e parmesão</li>
+                              <li>Gnocchi de batatas com molho 3 Formaggios - Nhoque caseiro com molho de queijos</li>
+                              <li>Escondidinho de carne seca com queijo - Carne seca com purê de batatas</li>
+                              <li>Escondidinho de frango com catupiry - Frango desfiado com purê de batatas</li>
+                          </ul>
+                      
+                          <h3>Em Réchaud</h3>
+                          <ul>
+                              <li>Pão de queijo</li>
+                          </ul>
+                      
+                          <h3>Doces</h3>
+                          <ul>
+                              <li>Mini Carolina de doce de leite</li>
+                              <li>Mini Croissant de chocolate belga</li>
+                          </ul>
+                      
+                          <h3>Bolos - Escolher 2 tipos</h3>
+                          <ul>
+                              <li>Bolo de chocolate</li>
+                              <li>Bolo de laranja</li>
+                              <li>Bolo de fubá</li>
+                              <li>Bolo mármore</li>
+                              <li>Bolo de iogurte</li>
+                              <li>Bolo de mandioca</li>
+                              <li>Bolo de maracujá</li>
+                              <li>Bolo de milho</li>
+                          </ul>
+                      
+                          <h3>Brunch Prime</h3>
+                      
+                          <h3>Coquetel (volante)</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+  
+    <footer>
+      <section class="footer">
+        <div class="about">
+          <h4>Sobre</h4>          
+          <a href="/src/html/sobre.html">Somos uma startup voltada para eventos</a>
+        </div>
+        
+        <div class="contact">
+          <h4><a href="/src/html/contato.html">Contato</a></h4>
+          <p>contato&commat;eventosexpress.com.br</p>
+        </div>       
+        
+        <div class="social-media">
+          <h4>Nossas Redes Sociais</h4>          
+          <nav class="icons">
+            <a href="https://www.facebook.com/?locale=pt_BR"><img src="/src/img/home/facebook.png" width="15" alt="icone facebook" style="filter: invert(100%);"></a>
+            <a href="https://www.instagram.com/"><img src="/src/img/home/instagram.png" width="30" alt="icone instagram" style="filter: invert(100%);"></a>
+            <a href="https://www.whatsapp.com/?lang=pt_BR"><img src="/src/img/home/whatsapp.png" width="30" alt="icone whatsapp" style="filter: invert(100%);"></a>
+          </nav>
+        </div>
+
+        <div class="signature">
+          <p>&copy; 2023 Eventos Express. Todos os direitos reservados.</p>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

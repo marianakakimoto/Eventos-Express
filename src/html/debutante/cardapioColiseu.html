@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos Express</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Lexend&display=swap" rel="stylesheet">
+    <script defer src="/src/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/src/index.html" class="logo"><img src="/src/img/home/logo.jpeg" alt="logo"></a>
+      <nav class="nav">
+        <button
+          class="btn-menu"
+          aria-label="Abrir Menu"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          Menu<span class="hamburger"></span>
+        </button>
+        <ul class="menu" id="menu" role="menu">
+          <li><a href="/src/index.html">Início</a></li>
+          <li><a href="/src/html/sobre.html">Sobre</a></li>
+          <li><a href="/src/html/contato.html">Contato</a></li>
+          <li><a href="/src/html/aut/perfil.html">Perfil</a></li>
+          <li><a href="/src/html/aut/login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container-cards">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card h-100 my-auto">
+                        <h2><b>Americano</b></h2>
+                        <div class="card-body overflow-auto">
+                            <h3>Canapês</h3>
+                            <ul>
+                                <li>Canapê colorido com recheio de beterraba</li>
+                                <li>Canapê colorido com recheio de salsinha</li>
+                                <li>Canapê de frango e curry (caril)</li>
+                                <li>Canapê de rosbife</li>
+                                <li>Barquete com patê de berinjela</li>
+                            </ul>
+                        
+                            <h3>Torradas</h3>
+                            <ul>
+                                <li>Torradas servidas com pasta de azeitona</li>
+                                <li>Torradas servidas com patê de atum e cream cheese</li>
+                                <li>Torradas servidas com patê de manjericão e queijo-de-minas</li>
+                                <li>Torradinha de tomate e manjericão</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 my-auto">
+                        <h2><b>Brunch</b></h2>
+                        <div class="card-body overflow-auto">
+                            <h3>Entradas:</h3>
+                            <ul>
+                                <li>Frios e queijos</li>
+                                <li>Diferentes tipos de pães</li>
+                                <li>Patês e geleias</li>
+                                <li>Iogurte</li>
+                                <li>Bolos</li>
+                                <li>Pão de queijo</li>
+                                <li>Frutas</li>
+                                <li>Canapés</li>
+                            </ul>
+                        
+    
+                        
+                            <h3>Primeiro Prato:</h3>
+                
+                            <ul>
+                                <li>Croque monsieur</li>
+                                <li>Croissants recheados</li>
+                                <li>Panquecas</li>
+                                <li>Waffles</li>
+                                <li>Torradas de abacate</li>
+                                <li>Omeletes</li>
+                                <li>Ovos Benedict</li>
+                                <li>Ovos mexidos com bacon</li>
+                            </ul>
+                        
+                            <h3>Prato Principal:</h3>
+
+                            <ul>
+                                <li>Salada de folhas</li>
+                                <li>Salada caprese</li>
+                                <li>Quiches</li>
+                                <li>Tortas salgadas</li>
+                                <li>Empadões</li>
+                                <li>Frittatas</li>
+                            </ul>
+                        
+                           
+                        
+                            <h3>Sobremesa:</h3>
+                            
+                            <ul>
+                                <li>Tortas doces</li>
+                                <li>Salada de frutas</li>
+                                <li>Mousses</li>
+                            </ul>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 my-auto">
+                        <h2><b>Empratado</b></h2>
+                        <div class="card-body overflow-auto">
+                            <h3>ENTRADAS</h3>
+                            <ul>
+                                <li>Sucos de polpa de frutas:
+                                    <ul>
+                                        <li>Manga</li>
+                                        <li>Goiaba</li>
+                                        <li>Acerola</li>
+                                        <li>Abacaxi</li>
+                                        <li>Abacaxi c/ hortelã</li>
+                                        <li>Laranja</li>
+                                    </ul>
+                                </li>
+                                <li>Refrigerantes de primeira linha:
+                                    <ul>
+                                        <li>Coca-Cola normal</li>
+                                        <li>Coca-Cola zero</li>
+                                        <li>Guaraná Antártica normal</li>
+                                        <li>Guaraná Antártica zero</li>
+                                        <li>Fanta laranja</li>
+                                    </ul>
+                                </li>
+                                <li>Coquetel sem álcool (dois sabores):
+                                    <ul>
+                                        <li>Morango</li>
+                                        <li>Cajá</li>
+                                        <li>Maracujá</li>
+                                    </ul>
+                                </li>
+                                <li>Água sem gás</li>
+                                <li>Salgados fritos diversos</li>
+                                <li>Salgados folhados diversos</li>
+                            </ul>
+                        
+                            <h3>PRINCIPAL (três opções)</h3>
+                            <ul>
+                                <li>Risoto de Camarão</li>
+                                <li>Risoto de Carne</li>
+                                <li>Risoto de Queijo com Bacon</li>
+                                <li>Risoto de linguiça de Frango</li>
+                                <li>Risoto de Linguiça de Porco</li>
+                                <li>Risoto vegetariano (brócolis, espinafre, cenoura, couve flor, ervilhas)</li>
+                                <li><strong>Risottonoir (arroz preto ao camarão ou linguiça ou bacon e calabresa)</strong> com valor extra</li>
+                            </ul>
+                        
+                            <h3>Escondidinho</h3>
+                            <ul>
+                                <li>Escondidinho de mandioca ao parmesão</li>
+                                <li>Escondidinho de Filé de Frango</li>
+                                <li>Escondidinho de Carne</li>
+                                <li>Escondidinho de Carne de Sol</li>
+                                <li>Escondidinho de Linguiça de Porco</li>
+                                <li>Escondidinho de Linguiça de Frango</li>
+                                <li>Escondidinho de Frango</li>
+                                <li>Escondidinho de Batata</li>
+                                <li>Escondidinho de Mandioca com Parmesão</li>
+                                <li>Escondidinho de Mandioca com Carne Moída</li>
+                            </ul>
+                        
+                            <h3>MESA DE ENCERRAMENTO</h3>
+                            <ul>
+                                <li>Café ou leite caramelizado</li>
+                                <li>* caso permaneça a pandemia será servido pelos garçons no final da festa.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+  
+    <footer>
+      <section class="footer">
+        <div class="about">
+          <h4>Sobre</h4>          
+          <a href="/src/html/sobre.html">Somos uma startup voltada para eventos</a>
+        </div>
+        
+        <div class="contact">
+          <h4><a href="/src/html/contato.html">Contato</a></h4>
+          <p>contato&commat;eventosexpress.com.br</p>
+        </div>       
+        
+        <div class="social-media">
+          <h4>Nossas Redes Sociais</h4>          
+          <nav class="icons">
+            <a href="https://www.facebook.com/?locale=pt_BR"><img src="/src/img/home/facebook.png" width="15" alt="icone facebook" style="filter: invert(100%);"></a>
+            <a href="https://www.instagram.com/"><img src="/src/img/home/instagram.png" width="30" alt="icone instagram" style="filter: invert(100%);"></a>
+            <a href="https://www.whatsapp.com/?lang=pt_BR"><img src="/src/img/home/whatsapp.png" width="30" alt="icone whatsapp" style="filter: invert(100%);"></a>
+          </nav>
+        </div>
+
+        <div class="signature">
+          <p>&copy; 2023 Eventos Express. Todos os direitos reservados.</p>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
